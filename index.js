@@ -24,7 +24,7 @@ function TranformText () {
 TranformText.prototype.horizontalFlip = function (allOutputText) {
     this.horizontalFlipValue = [];
     for(let i = 0; i < allOutputText.length; i++) {
-        if($.inArray(allOutputText[i], row1) != 1) {
+        if($.inArray(allOutputText[i], row1) != -1) {
             characterPlaceInArray = row1.indexOf(allOutputText[i], row1);
             this.horizontalFlipValue.push(row1[(row1.length - 1) - characterPlaceInArray]);
         } else if ($.inArray(allOutputText[i], row2) != -1) {
